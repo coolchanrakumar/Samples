@@ -38,19 +38,7 @@ public class MainActivity extends Activity
     private void showMessage()
     {
         CToast cToast = new CToast(CApplication.applicationContext);
-        cToast.show("From Activity");
-        /*Toast toast = new Toast(getApplicationContext());
-        LayoutInflater inflater = (LayoutInflater) CApplication.applicationContext.getSystemService(LAYOUT_INFLATER_SERVICE);
-        //LayoutInflater inflater = getLayoutInflater();
-        ViewGroup toastLayout = (ViewGroup) inflater.inflate(R.layout.toast_layout, null);
-
-        TextView messageTxt = (TextView) toastLayout.findViewById(R.id.text);
-        messageTxt.setText("Root Null");
-        toast.setView(toastLayout);
-        toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
-        toast.setDuration(Toast.LENGTH_LONG);
-        toast.show();*/
-        
+        cToast.show("From Activity");        
     }
 
 }
