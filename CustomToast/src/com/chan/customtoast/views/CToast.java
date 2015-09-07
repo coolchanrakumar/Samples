@@ -25,14 +25,13 @@ public class CToast extends Toast
     
     private void init()
     {
-        //ViewGroup toastLayout = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.toast_layout, (ViewGroup) getView().findViewById(R.id.toast_layout_root));
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         ViewGroup toastLayout = (ViewGroup) inflater.inflate(R.layout.toast_layout, null);
-
+        //toastLayout.setLayoutParams(new LinearLayout.LayoutParams(300, LinearLayout.LayoutParams.MATCH_PARENT));
         messageTxt = (TextView) toastLayout.findViewById(R.id.text);
         messageTxt.setText("This is a custom toast");
         this.setView(toastLayout);
-        this.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        this.setGravity(Gravity.FILL_HORIZONTAL | Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
         this.setDuration(Toast.LENGTH_LONG);        
 
     }
